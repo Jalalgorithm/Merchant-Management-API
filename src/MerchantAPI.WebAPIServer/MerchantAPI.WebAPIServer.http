@@ -1,0 +1,6 @@
+@MerchantAPI.WebAPIServer_HostAddress = http://localhost:5229
+
+GET {{MerchantAPI.WebAPIServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
