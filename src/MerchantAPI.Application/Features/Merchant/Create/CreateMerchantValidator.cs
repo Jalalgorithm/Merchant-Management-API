@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FluentValidation;
+using MerchantAPI.Domain.ValueObjects;
 
 namespace MerchantAPI.Application.Features.Merchant.Create
 {
@@ -23,10 +24,10 @@ namespace MerchantAPI.Application.Features.Merchant.Create
                 .NotEmpty().WithMessage("Phone number is required.")
                 .Matches(@"^\+?[1-9]\d{1,14}$").WithMessage("Invalid phone number format.");
 
-            RuleFor(x=>x.Status)
+            RuleFor(x => x.Status)
                 .NotEmpty().WithMessage("Status is required.")
-                .Must(status => new[] { "Pending" , "Active", "Inactive" }.Contains(status))
-                .IsInEnum().WithMessage("Invalid status value. It must be either Pending or  Active or Inactive.");
+                .Must(status => Enum.GetNames(typeof(Status)).Contains(status))
+                .WithMessage("Invalid status value. It must be either Pending, Active, or Inactive.");
         }
     }
 }
