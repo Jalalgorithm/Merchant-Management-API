@@ -8,5 +8,8 @@ namespace MerchantAPI.Application.Features.Merchant.GetAll
 {
     public record GetAllMerchant: MerchantBase
     {
+        public int Id { get; set; }
+        public string Status { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

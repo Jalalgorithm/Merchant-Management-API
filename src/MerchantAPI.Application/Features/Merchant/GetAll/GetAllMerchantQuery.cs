@@ -8,5 +8,5 @@ using MerchantAPI.Application.Commons.Responses;
 
 namespace MerchantAPI.Application.Features.Merchant.GetAll
 {
-    public record GetAllMerchantQuery : IRequest<ServiceResponse<List<GetAllMerchant>>>;
+    public record GetAllMerchantQuery : IRequest<ServiceResponse<IEnumerable<GetAllMerchant>>>;
 }
