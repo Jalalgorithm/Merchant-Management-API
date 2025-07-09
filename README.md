@@ -19,7 +19,78 @@ This document provides comprehensive API documentation for the Merchant API. It 
 
 ## 1. Introduction
 
+
 The Merchant API provides a set of endpoints for managing merchant information within the system. It follows a Clean Architecture approach with CQRS (Command Query Responsibility Segregation) pattern, leveraging MediatR for handling commands and queries.
+
+## 📁 Project Structure (Clean Architecture)
+
+```
+├── src
+│   ├── Application          # CQRS Handlers, DTOs, Validators, Interfaces
+│   ├── Domain               # Entities, Enums, ValueObjects, Business Rules
+│   ├── Infrastructure       # Persistence Layer, External Services
+│   ├── WebApi               # API Controllers, DI, Middlewares
+└── tests
+    └── UnitTests            # xUnit or NUnit-based unit tests
+```
+
+## 🛠️ Tech Stack
+
+* **.NET 7 or 8**
+* **ASP.NET Core Web API**
+* **MediatR** for CQRS
+* **FluentValidation**
+* **In-Memory EF Core** for database
+* **Swagger / Swashbuckle**
+* **AutoMapper**
+* **Serilog** (Optional logging)
+* **xUnit/NUnit** for testing
+
+## 🚀 Getting Started
+
+###  📦 Clone the Repository
+
+```bash
+git clone https://github.com/jalalgorithm/Merchant-Management-API.git
+cd Merchant-Management-API
+```
+
+---
+
+###  🧹 Prerequisites
+
+Ensure you have the following installed:
+
+* [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download)
+* Visual Studio 2022+ or VS Code (with C# plugin)
+* Git
+
+---
+
+###  🛠️ Build the Project
+
+Using CLI:
+
+```bash
+dotnet build
+```
+
+Using Visual Studio:
+
+* Open `YourSolution.sln`
+* Restore NuGet packages
+* Build the solution (Ctrl + Shift + B)
+
+---
+
+###  🧪 Run the Application
+
+```bash
+cd src/MerchantAPI.WebAPIServer
+dotnet run
+```
+
+
 
 All API responses conform to a standard `ServiceResponse<T>` format:
 
