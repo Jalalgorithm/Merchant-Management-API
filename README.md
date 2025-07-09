@@ -36,7 +36,7 @@ The Merchant API provides a set of endpoints for managing merchant information w
 
 ## 🛠️ Tech Stack
 
-* **.NET 7 or 8**
+* **.NET 8**
 * **ASP.NET Core Web API**
 * **MediatR** for CQRS
 * **FluentValidation**
