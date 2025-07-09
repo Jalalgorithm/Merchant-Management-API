@@ -77,7 +77,7 @@ dotnet build
 
 Using Visual Studio:
 
-* Open `YourSolution.sln`
+* Open `MerchantAPI.sln`
 * Restore NuGet packages
 * Build the solution (Ctrl + Shift + B)
 
